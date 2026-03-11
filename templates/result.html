@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game Result</title>
+    <style>
+        body {
+            background: #fff396;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            font-size: 40px;
+            margin-top: 20%;
+        }
+        .celebration {
+            font-size: 30px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    {% if result == 'won' %}
+        <h2>🎉 YOU WON! 🎉</h2>
+        <p class="celebration">Fantastic job! The word was: <strong>{{ secret_word|upper }}</strong></p>
+        <p>🏆 YOU'RE A WORD MASTER! 🏆</p>
+    {% else %}
+        <h2>You Lost! 😢</h2>
+        <p>The word was: <strong>{{ secret_word|upper }}</strong></p>
+    {% endif %}
+    <a href="{{ url_for('new_game') }}"><button>Play Again</button></a>
+</body>
+</html>

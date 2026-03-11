@@ -1,0 +1,20 @@
+# Python Wordle Game
+
+A web-based Wordle-style game built using Flask.
+
+## Features
+- Word guessing gameplay
+- Color-coded feedback for correct and misplaced letters
+- Dynamic word length selection
+- Simple web interface
+
+## Technologies Used
+- Python
+- Flask
+- HTML / CSS
+
+## Run Locally
+
+```bash
+pip install flask
+python app.py
